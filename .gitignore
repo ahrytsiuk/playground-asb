@@ -7,3 +7,6 @@ target/
 
 ### Mac OS ###
 .DS_Store
+
+### Local dev ###
+azure.env

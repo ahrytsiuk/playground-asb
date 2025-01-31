@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="PlaygroundAsbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <option name="envFilePaths">
+      <option value="$PROJECT_DIR$/azure.env" />
+    </option>
+    <module name="playground-asb" />
+    <selectedOptions>
+      <option name="environmentVariables" />
+    </selectedOptions>
+    <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.ahrytsiuk.playground.PlaygroundAsbApplication" />
+    <option name="WORKING_DIRECTORY" value="file://$MODULE_WORKING_DIR$" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

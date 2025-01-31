@@ -24,6 +24,21 @@ spring:
         tenant-id: ${AZURE_TENANT_ID}
         subscription-id: ${AZURE_SUBSCRIPTION_ID}
       servicebus:
-        namespace: ${AZURE_SERVICEBUS_NAMESPACE}
+        namespace: ${AZURE_SERVICE_BUS_NAMESPACE}
         resource:
-          resource-group: ${AZURE_SERVICEBUS_RESOURCE_GROUP}
+          resource-group: ${AZURE_SERVICE_BUS_RESOURCE_GROUP}
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+logging:
+  level:
+    root: warn
+    com.azure: info
+    "com.github.ahrytsiuk.playground": info
