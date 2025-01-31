@@ -3,19 +3,13 @@ spring:
     name: playground-asb
   cloud:
     stream:
+      default-binder: servicebus
       bindings:
         echoListener-out-0:
           destination: echo
         echoListener-in-0:
           destination: echo
           group: test
-
----
-spring.config.activate.on-profile: servicebus
-spring:
-  cloud:
-    stream:
-      default-binder: servicebus
       servicebus:
         default:
           producer:
@@ -33,31 +27,3 @@ spring:
         namespace: ${AZURE_SERVICEBUS_NAMESPACE}
         resource:
           resource-group: ${AZURE_SERVICEBUS_RESOURCE_GROUP}
-      eventhubs:
-        kafka:
-          enabled: false
-
----
-spring.config.activate.on-profile: kafka
-spring:
-  cloud:
-    stream:
-      default-binder: kafka
-  kafka:
-    properties:
-      bootstrap:
-        servers: BROKER://localhost:9091
-
----
-spring.config.activate.on-profile: rabbit
-spring:
-  cloud:
-    stream:
-      default-binder: rabbit
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-
-
